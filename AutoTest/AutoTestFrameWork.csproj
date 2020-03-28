@@ -52,7 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BaseWebDriver.cs" />
     <Compile Include="Control\BaseControl.cs" />
     <Compile Include="Control\Cell.cs" />
     <Compile Include="Control\Row.cs" />

@@ -17,7 +17,7 @@ namespace AutoTest.Control
         {
             List<Cell> cells = new List<Cell>();
 
-            foreach (var cell in rootElement.FindElements(By.XPath("")))
+            foreach (var cell in rootElement.FindElements(By.XPath(".//td")))
             {
                 cells.Add(new Cell(webDriver, cell));
             }

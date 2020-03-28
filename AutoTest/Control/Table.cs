@@ -19,7 +19,7 @@ namespace AutoTest.Control
             {
                 List<Row> rows = new List<Row>();
 
-                foreach (var row in rootElement.FindElements(By.XPath("")))
+                foreach (var row in rootElement.FindElements(By.XPath(".//tbody/tr")))
                 {
                     rows.Add(new Row(webDriver, row));
                 }
