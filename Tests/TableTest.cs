@@ -15,17 +15,19 @@ namespace Tests
 {
     public class TableTest
     {
+        IWebDriver webDriver;
+
         [SetUp]
         public void Set()
         {
-
+            webDriver = new ChromeDriver();
+            webDriver.Manage().Window.Maximize();
         }
 
         [Test]
         public void KendoTableOne()
         {
-            IWebDriver webDriver = new ChromeDriver();
-            webDriver.Manage().Window.Maximize();
+            
             webDriver.Navigate().GoToUrl("https://www.telerik.com/kendo-angular-ui/components/grid/how-to/filter-all-columns/");
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(30));
             wait.Until(r => r.FindElement(By.Id("example-filter-all-columns")));
@@ -41,7 +43,7 @@ namespace Tests
         [TearDown]
         public void Tear()
         {
-
+            webDriver.Quit();
         }
 
     }
