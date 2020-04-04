@@ -25,9 +25,10 @@ namespace Tests
         }
 
         [Test]
+        [Author("Neeraj", "neeraj.vr16@gmail.com")]
+        [Description("Get data from kendo table")]
         public void KendoTableOne()
         {
-            
             webDriver.Navigate().GoToUrl("https://www.telerik.com/kendo-angular-ui/components/grid/how-to/filter-all-columns/");
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(30));
             wait.Until(r => r.FindElement(By.Id("example-filter-all-columns")));
